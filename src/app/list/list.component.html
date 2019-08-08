@@ -1,0 +1,19 @@
+<!--Lists all names in the database-->
+<h1>LIST PAGE </h1>
+    
+<div  fxLayout="column" >  
+        
+  <mat-list-item *ngFor="let item of people; let i=index" >
+  <div fxFlex="auto"> 
+          Id: {{i}}   <br>
+          First Name:  {{item.fName}}    <br> 
+          Last Name    {{item.lName}}   <br>     
+      <button mat-button mat-raised-button color="accent" [routerLink]="['/edit', i]">edit  </button>
+      <button mat-button mat-mini-fab color="warn"  (click) = openDialog(i) > delete  </button>
+        <mat-divider ></mat-divider>
+    </div>
+        
+  </mat-list-item>
+</div>
+<app-add></app-add>
+

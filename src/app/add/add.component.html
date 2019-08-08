@@ -1,0 +1,35 @@
+
+<h1> Add </h1>
+	<div> <!--Double curly brackets link angular with html --> {{errorMessage}} </div>
+	<form [formGroup]="peopleForm" (ngSubmit)="submit()">
+
+ {{formDataSubmittedtMessage}}
+ 
+
+			<div fxFlex fxLayout="row wrap" fxLayoutGap="20px">
+
+				<mat-form-field>
+					<input matInput placeholder="First name" formControlName="fName">
+				</mat-form-field>
+
+				<mat-form-field>
+					<input matInput placeholder="Last name" formControlName="lName">
+				</mat-form-field>
+
+
+
+			<div fxFlex class="register-but">
+				<button   mat-raised-button color="primary">submit</button>
+			</div>
+
+			</div>
+
+
+	
+
+	</form>
+  <!-- this is here to show the dynamic addition of the data being entered -->
+	<br> {{ peopleForm.value | json }} 
+
+
+
